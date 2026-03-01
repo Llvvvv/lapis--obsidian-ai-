@@ -1,0 +1,267 @@
+/* =====================================================
+   Lapis - Full Fidelity Port for Obsidian
+   Based on original Typora Lapis
+   ===================================================== */
+
+/* ================= ROOT ================= */
+@font-face {
+    font-family: "Cantarell";
+    src: url("fonts/Cantarell-VF-fixed.otf");
+}
+
+@font-face {
+    font-family: "SourceHanSerifCN";
+    src: url("fonts/SourceHanSerifCN-Medium.otf");
+}
+
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("fonts/JetBrainsMono-Regular.ttf");
+}
+
+:root {
+    --text-color: #40464f;
+    --primary-color: #4870ac;
+    --bg-color: #ffffff;
+    --marker-color: #a2b6d4;
+    --highlight-color: #ffffb5c2;
+    --header-span-color: var(--primary-color);
+    --block-bg-color: #f6f8fa;
+    --img-shadow-color: #e3e8f0;
+
+    --font-serif: "SourceHanSerifCN", serif;
+    --font-main: "Cantarell", "Source Han Serif CN", serif;
+    --font-mono: "JetBrainsMono", monospace;
+}
+
+/* ================= BASE ================= */
+
+.markdown-rendered,
+.markdown-source-view.mod-cm6 {
+    max-width: 950px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-family: var(--font-main);
+}
+
+/* ================= STRONG & LINK ================= */
+
+strong,
+.cm-strong {
+    color: var(--primary-color);
+}
+
+a,
+.cm-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* ================= HEADERS ================= */
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.cm-header {
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+}
+
+/* H1 */
+.markdown-rendered h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: .9rem;
+    margin-bottom: 2.3rem;
+}
+
+/* H2 蓝块 */
+.markdown-rendered h2,
+.cm-header-2 {
+    background-color: var(--header-span-color);
+    color: white !important;
+    padding: 2px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: .3em 0;
+}
+
+.markdown-rendered,
+.markdown-source-view.mod-cm6 .cm-content {
+    max-width: 950px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+/* 段落间距 */
+.markdown-rendered p,
+.cm-line {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+/* 列表行距 */
+.markdown-rendered li,
+.cm-line {
+    line-height: 1.7rem;
+}
+
+/* ================= LIST ================= */
+
+.markdown-rendered li::marker {
+    color: var(--marker-color);
+    font-weight: bold;
+}
+
+/* ================= BLOCKQUOTE ================= */
+
+.markdown-rendered blockquote {
+    border-left: 3px solid var(--primary-color);
+    background: var(--block-bg-color);
+    padding: 15px 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* ================= INLINE CODE ================= */
+
+.markdown-rendered :not(pre) > code,
+.cm-inline-code,
+.cm-code {
+    color: var(--primary-color);
+    background-color: var(--block-bg-color);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.cm-inline-code {
+    color: var(--primary-color) !important;
+    background-color: var(--block-bg-color) !important;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: var(--font-monospace) !important;
+}
+
+/* ================= CODE BLOCK ================= */
+
+/* Reading View */
+
+.markdown-rendered pre {
+    color: var(--primary-color);
+    background: var(--block-bg-color);
+    border-radius: 10px;
+    padding: 1.2rem .8rem;
+    font-family: var(--font-mono);
+    line-height: 1.6rem;
+}
+
+
+
+/* Live Preview CM6 */
+
+.cm-editor .cm-content .cm-codeblock {
+    color: var(--primary-color);
+    background: var(--block-bg-color);
+    border-radius: 10px;
+    padding: 1.2rem .8rem;
+    font-family: var(--font-mono);
+    line-height: 1.6rem;
+}
+
+/* 行号 */
+.cm-lineNumbers .cm-gutterElement {
+    color: var(--primary-color);
+}
+
+/* ================= SYNTAX (保留原配色) ================= */
+
+.cm-keyword { color: #1694b6 !important; }
+.cm-operator { color: #2f86d2 !important; }
+.cm-variable { color: #b9218e !important; }
+.cm-variable-2 { color: #7aadad !important; }
+.cm-variable-3 { color: #378ed8 !important; }
+.cm-number { color: #1a5494 !important; }
+.cm-def { color: #0744ac !important; }
+.cm-string { color: #6f42c2 !important; }
+.cm-comment { color: #9a9a9a !important; }
+.cm-meta { color: #0b93be !important; }
+
+/* ================= TABLE ================= */
+
+.markdown-rendered table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.markdown-rendered th {
+    color: var(--primary-color);
+    font-weight: bold;
+    background-color: var(--block-bg-color);
+}
+
+.markdown-rendered th,
+.markdown-rendered td {
+    border: 1px solid #d9dfe4;
+    padding: 6px 10px;
+}
+
+.markdown-rendered td:hover,
+.markdown-rendered th:hover {
+    background-color: var(--block-bg-color);
+}
+
+/* ================= IMAGE ================= */
+
+.markdown-rendered img {
+    max-width: 100%;
+    display: block;
+    margin: 1rem auto;
+    filter: drop-shadow(var(--img-shadow-color) 0px 6px 6px);
+}
+
+/* ================= HR ================= */
+
+.markdown-rendered hr {
+    border: 0;
+    border-top: 2px solid #eef2f5;
+    margin: 20px 0;
+}
+
+/* ================= CHECKBOX ================= */
+
+.markdown-rendered input[type=checkbox] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--marker-color);
+    position: relative;
+}
+
+.markdown-rendered input[type=checkbox]:checked::after {
+    content: "✓";
+    position: absolute;
+    font-size: 0.7rem;
+    left: 2px;
+    top: -1px;
+    color: var(--primary-color);
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: .8rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(179, 179, 179, 0.425);
+}
