@@ -36,6 +36,17 @@
 
 /* ================= BASE ================= */
 
+/* 侧栏 */
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+    background-color: #ffffff !important;
+}
+
+/*正文*/
+.workspace-leaf-content {
+    background-color: #ffffff !important;
+}
+
 .markdown-rendered,
 .markdown-source-view.mod-cm6 {
     max-width: 950px;
