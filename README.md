@@ -1,5 +1,5 @@
 # lapis--obsidian-ai
-用过typora的 lapis主题再看其他的完全没心情了
+
 
 ai写的，没学过，懒得折腾，留着当备份，只能说能用
 
